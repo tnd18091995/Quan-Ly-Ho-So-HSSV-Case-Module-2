@@ -2,32 +2,26 @@ package model;
 
 import java.io.Serializable;
 
-public class Student extends School implements Ranking, Serializable {
-    private double score;
+public class Teacher extends School implements Ranking, Serializable {
+    private int workDay;
 
-    public Student() {
+    public Teacher() {
     }
-
-    public Student(int id, String name, String dateOfBirth, String phoneNumber, String address, String gender, String email) {
+    public Teacher(int id, String name, String dateOfBirth, String phoneNumber, String address, String gender, String email, int workDay) {
         super(id, name, dateOfBirth, phoneNumber, address, gender, email);
+        this.workDay = workDay;
     }
 
-    public double getScore() {
-        return score;
+    public int getWorkDay() {
+        return workDay;
     }
 
-    public void setScore(double score) {
-        this.score = score;
+    public void setWorkDay(int workDay) {
+        this.workDay = workDay;
     }
-
-    @Override
-    public String Rank() {
-        return null;
-    }
-
     @Override
     public String toString() {
-        return "Student{" +
+        return "Teacher{" +
                 "id=" + getId() +
                 ", name='" + getName() + '\'' +
                 ", dateOfBirth='" + getDateOfBirth() + '\'' +
@@ -35,7 +29,12 @@ public class Student extends School implements Ranking, Serializable {
                 ", Address='" + getAddress() + '\'' +
                 ", gender='" + getGender() + '\'' +
                 ", email='" + getEmail() + '\'' +
-                "score=" + score +
+                "workDay=" + workDay+
                 '}';
+    }
+
+    @Override
+    public String Rank() {
+        return null;
     }
 }

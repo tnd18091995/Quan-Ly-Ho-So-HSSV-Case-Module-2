@@ -1,4 +1,4 @@
-package model;
+package models;
 
 public class PhoneNumber {
     private String phoneNumber;

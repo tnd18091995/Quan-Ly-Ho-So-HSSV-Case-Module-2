@@ -46,7 +46,7 @@ public class ReadWriteFileStudent implements IReadWriteFileStudent {
     }
     public List<Student> getStudent(){
         List<Student> listStudent = new ArrayList<>();
-        listStudent.add(new Student());
+        listStudent.add(new Student(01, "Khoa Ga", "19-09-89","036787898","Nam","khoaga888@gmail.com","HN"));
         writeFile(listStudent);
         return listStudent;
     }

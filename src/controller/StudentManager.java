@@ -1,5 +1,5 @@
 package controller;
-import models.Student;
+import model.Student;
 import storage.IReadWriteFile;
 import storage.ReadWriteFileStudent;
 import java.util.List;

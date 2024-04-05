@@ -8,8 +8,15 @@ public class Student extends School implements Ranking, Serializable {
     public Student() {
     }
 
-    public Student(int id, String name, String dateOfBirth, String phoneNumber, String address, String gender, String email) {
+//    public Student(int id, String name, String dateOfBirth, String phoneNumber, String address, String gender, String email, double score) {
+//        super(id, name, dateOfBirth, phoneNumber, address, gender, email);
+//        this.score = score;
+//    }
+
+
+    public Student(int id, String name, String dateOfBirth, String phoneNumber, String address, String gender, String email, double score) {
         super(id, name, dateOfBirth, phoneNumber, address, gender, email);
+        this.score = score;
     }
 
     public double getScore() {

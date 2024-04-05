@@ -15,6 +15,7 @@ public class Main {
                 System.out.println("1. Add Student");
                 System.out.println("2. Show ListStudents");
                 System.out.println("3. Find Student");
+                System.out.println("4. Find Student");
                 System.out.println("0. Exit ");
                 choice = scanner.nextInt();
                 scanner.nextLine();

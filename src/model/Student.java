@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 public class Student extends School implements Ranking, Serializable {
     private double score;
@@ -14,7 +15,7 @@ public class Student extends School implements Ranking, Serializable {
 //    }
 
 
-    public Student(int id, String name, String dateOfBirth, String phoneNumber, String address, String gender, String email, double score) {
+    public Student(int id, String name, LocalDate dateOfBirth, String phoneNumber, String address, String gender, String email, double score) {
         super(id, name, dateOfBirth, phoneNumber, address, gender, email);
         this.score = score;
     }

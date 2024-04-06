@@ -1,13 +1,14 @@
 package model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 public class Teacher extends School implements Ranking, Serializable {
     private int workDay;
 
     public Teacher() {
     }
-    public Teacher(int id, String name, String dateOfBirth, String phoneNumber, String address, String gender, String email, int workDay) {
+    public Teacher(int id, String name, LocalDate dateOfBirth, String phoneNumber, String address, String gender, String email, int workDay) {
         super(id, name, dateOfBirth, phoneNumber, address, gender, email);
         this.workDay = workDay;
     }

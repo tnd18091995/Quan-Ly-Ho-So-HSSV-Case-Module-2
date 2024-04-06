@@ -1,8 +1,7 @@
 package storage;
-
 import model.Student;
-
 import java.io.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,7 +45,7 @@ public class ReadWriteFileStudent implements IReadWriteFileStudent {
     }
     public List<Student> getStudent(){
         List<Student> listStudent = new ArrayList<>();
-        listStudent.add(new Student(01, "Khoa Ga", "19-09-89","036787898","HN","Nam","khoaga888@gmail.com",1.2));
+        listStudent.add(new Student(01, "Khoa Ga", LocalDate.of(1994,10,01),"036787898","HN","Nam","khoaga888@gmail.com",1.2));
         writeFile(listStudent);
         return listStudent;
     }

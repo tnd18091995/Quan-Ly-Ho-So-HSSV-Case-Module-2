@@ -1,11 +1,12 @@
 package model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 public class School implements Serializable {
     private int id;
     private String name;
-    private String dateOfBirth;
+    private LocalDate dateOfBirth;
     private String phoneNumber;
     private String address;
     private String gender;
@@ -14,7 +15,7 @@ public class School implements Serializable {
     public School() {
     }
 
-    public School(int id, String name, String dateOfBirth, String phoneNumber, String address, String gender, String email) {
+    public School(int id, String name, LocalDate dateOfBirth, String phoneNumber, String address, String gender, String email) {
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -53,11 +54,11 @@ public class School implements Serializable {
         this.name = name;
     }
 
-    public String getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

@@ -1,13 +1,12 @@
 package storage;
 
 import model.Teacher;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReadWriteFileTeacher implements IReadWriteFileTeacher {
-    public static final String PATHNAME_TEACHER = "studentList.txt";
+    public static final String PATHNAME_TEACHER = "teacherList.txt";
 
     public void writeFile(List<Teacher> students){
         File fileTeacher = new File(PATHNAME_TEACHER);

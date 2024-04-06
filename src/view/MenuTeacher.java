@@ -21,7 +21,7 @@ public class MenuTeacher {
             switch (choice) {
                 case 1:
                     TeacherManager.addNewTeacher(scanner);
-                    
+
                     break;
                 case 2:
                     TeacherManager.showTeacherList();

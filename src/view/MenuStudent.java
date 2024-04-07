@@ -1,14 +1,7 @@
 package view;
 
 import controller.StudentManager;
-import controller.TeacherManager;
-import model.Student;
-import model.Teacher;
-
-import java.time.LocalDate;
 import java.util.Scanner;
-
-import static controller.StudentManager.addNewStudent;
 
 public class MenuStudent {
     public static void showMenuStudent() {
@@ -21,6 +14,7 @@ public class MenuStudent {
             System.out.println("3. Find Student");
             System.out.println("4. Edit Student");
             System.out.println("5. Remove Student");
+            System.out.println("6. Sort Student");
             System.out.println("0. Exit ");
             choice = scanner.nextInt();
             scanner.nextLine();
@@ -39,12 +33,15 @@ public class MenuStudent {
                 case 4:
                     System.out.println("Enter ID Student");
                     int idEdit = scanner.nextInt();
-                    StudentManager.removeStudent(idEdit);
-                    StudentManager.addNewStudent(scanner);
+                    StudentManager.editStudent(idEdit,scanner);
+                    break;
                 case 5:
                     System.out.println("Enter ID Student");
                     int idRemove = scanner.nextInt();
                     StudentManager.removeStudent(idRemove);
+                    break;
+                case 6:
+                    StudentManager.sortScore();
                 case 0:
                     System.out.println("Exit Program");
                     break;

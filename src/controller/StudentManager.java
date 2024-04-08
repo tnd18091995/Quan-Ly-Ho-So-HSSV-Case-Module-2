@@ -18,17 +18,7 @@ public class StudentManager {
     private static IReadWriteFileStudent readWriteFileStudent = new ReadWriteFileStudent();
     private static List<Student> studentsList = readWriteFileStudent.readFile();
 
-    public static void displayStudent(){
-        if(studentsList.isEmpty()){
-            System.out.println("Empty");
-            return;
-        }
-        for(Student student : studentsList){
-            System.out.println(student);
-        }
-    }
     public static void addNewStudent(Scanner scanner) {
-        System.out.println("Enter ID: ");
         int id;
         boolean idExists;
         do{
@@ -45,6 +35,7 @@ public class StudentManager {
         }while (idExists);
         System.out.println("Enter Name: ");
         String name = scanner.nextLine();
+        scanner.nextLine();
         System.out.println("Enter Date Of Birth: ");
         int day = 0;
         do{
@@ -61,6 +52,7 @@ public class StudentManager {
         LocalDate dateOfBirth = LocalDate.of(year,month,day);
         System.out.println("Enter Phone Number: ");
         String phoneNumber1 = scanner.nextLine();
+        scanner.nextLine();
         while (!PHONE_PATTERN.matcher(phoneNumber1).matches()){
             System.out.println("Invalid phone number");
             phoneNumber1 = scanner.nextLine();
@@ -85,7 +77,7 @@ public class StudentManager {
         System.out.println("Enter Email: ");
         String email1 = scanner.nextLine();
         while (!MAIL_PATTERN.matcher(email1).matches()){
-            System.out.println("Invalid email!");
+            System.err.println("Invalid email!");
             email1 = scanner.nextLine();
         }
         String email = email1;
@@ -173,6 +165,7 @@ public static void editStudent(int id, Scanner scanner) {
             scanner.nextLine();
             System.out.println("Enter Email: ");
             String email = scanner.nextLine();
+            scanner.nextLine();
             System.out.println("Enter Score");
             double score = scanner.nextDouble();
             studentsList.get(i).setName(name);

@@ -17,7 +17,6 @@ public class TeacherManager {
     private static IReadWriteFileTeacher readWriteFileTeacher = new ReadWriteFileTeacher();
     private static List<Teacher> teachersList = readWriteFileTeacher.readFile();
     public static void addNewTeacher(Scanner scanner) {
-        System.out.println("Enter ID: ");
         int id;
         boolean idExists;
         do{
@@ -35,6 +34,7 @@ public class TeacherManager {
         System.out.println();
         System.out.println("Enter Name: ");
         String name = scanner.nextLine();
+        scanner.nextLine();
         System.out.println("Enter Date Of Birth: ");
         int day = 0;
         do{
@@ -51,6 +51,7 @@ public class TeacherManager {
         LocalDate dateOfBirth = LocalDate.of(year,month,day);
         System.out.println("Enter Phone Number: ");
         String phoneNumber1 = scanner.nextLine();
+        scanner.nextLine();
         while (!PHONE_PATTERN.matcher(phoneNumber1).matches()){
             System.out.println("Invalid phone number");
             phoneNumber1 = scanner.nextLine();
@@ -74,6 +75,7 @@ public class TeacherManager {
         }
         System.out.println("Enter Email: ");
         String email1 = scanner.nextLine();
+        scanner.nextLine();
         while (!MAIL_PATTERN.matcher(email1).matches()){
             System.out.println("Invalid email!");
             email1 = scanner.nextLine();
@@ -163,6 +165,7 @@ public class TeacherManager {
                 scanner.nextLine();
                 System.out.println("Enter Email: ");
                 String email = scanner.nextLine();
+                scanner.nextLine();
                 System.out.println("Enter Work Day");
                 int workDay = scanner.nextInt();
                 teachersList.get(i).setName(name);

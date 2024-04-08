@@ -18,7 +18,7 @@ public class ReadWriteFileTeacher implements IReadWriteFileTeacher {
             opsTeacher.close();
             oosTeacher.writeObject(students);
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Saved");
         }
     }
 

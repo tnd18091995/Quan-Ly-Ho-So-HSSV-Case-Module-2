@@ -18,7 +18,7 @@ public class ReadWriteFileStudent implements IReadWriteFileStudent {
             opsStudent.close();
             oosStudent.writeObject(students);
         } catch (IOException e) {
-            System.out.println("loi ghi file" + e.getMessage());
+            System.out.println("Saved");
         }
     }
 

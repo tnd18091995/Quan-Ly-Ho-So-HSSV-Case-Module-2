@@ -1,6 +1,5 @@
 package view;
 import facade.FacadeInfo;
-
 import java.util.Scanner;
 
 import static view.MenuStudent.showMenuStudent;

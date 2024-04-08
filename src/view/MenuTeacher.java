@@ -1,9 +1,5 @@
 package view;
-import controller.StudentManager;
 import controller.TeacherManager;
-import model.Teacher;
-
-import java.time.LocalDate;
 import java.util.Scanner;
 public class MenuTeacher {
     public static void showMenuTeacher() {

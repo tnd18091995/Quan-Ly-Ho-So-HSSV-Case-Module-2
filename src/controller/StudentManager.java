@@ -1,11 +1,7 @@
 package controller;
 import model.Student;
-import models.Gender;
-import storage.IReadWriteFile;
 import storage.IReadWriteFileStudent;
 import storage.ReadWriteFileStudent;
-
-import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;

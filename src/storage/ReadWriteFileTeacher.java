@@ -18,7 +18,7 @@ public class ReadWriteFileTeacher implements IReadWriteFileTeacher {
             opsTeacher.close();
             oosTeacher.writeObject(students);
         } catch (IOException e) {
-            System.out.println("loi ghi file" + e.getMessage());
+            System.out.println(e.getMessage());
         }
     }
 

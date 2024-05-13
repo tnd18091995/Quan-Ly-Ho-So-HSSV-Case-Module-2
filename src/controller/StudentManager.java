@@ -2,6 +2,8 @@ package controller;
 import model.Student;
 import storage.IReadWriteFileStudent;
 import storage.ReadWriteFileStudent;
+
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
@@ -29,6 +31,7 @@ public class StudentManager {
                 }
             }
         }while (idExists);
+        System.out.println();
         System.out.println("Enter Name: ");
         String name = scanner.nextLine();
         scanner.nextLine();
@@ -180,8 +183,12 @@ public static void editStudent(int id, Scanner scanner) {
         System.out.println("Student not found!");
         }
     }
-    public static void sortScore(){
+    public static void sortScoreAscending(){
         studentsList.sort(Comparator.comparingDouble(Student::getScore));
+        showStudentList();
+    }
+    public static void sortScoreDescending() {
+        studentsList.sort(Comparator.comparingDouble(Student::getScore).reversed());
         showStudentList();
     }
 }

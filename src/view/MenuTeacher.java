@@ -40,7 +40,7 @@ public class MenuTeacher {
                     TeacherManager.removeTeachers(idRemove);
                     break;
                 case 6:
-                    TeacherManager.sortWorkDay();
+                    MenuSortTeacher.sortTeacher();
                 case 0:
                     System.out.println("Exit Program");
                     break;

@@ -182,8 +182,12 @@ public class TeacherManager {
             System.out.println("Teacher not found!");
         }
     }
-    public static void sortWorkDay(){
+    public static void sortWorkDayAscending(){
         teachersList.sort(Comparator.comparingDouble(Teacher::getWorkDay));
+        showTeacherList();
+    }
+    public static void sortWorkDayDescending(){
+        teachersList.sort(Comparator.comparingDouble(Teacher::getWorkDay).reversed());
         showTeacherList();
     }
 }

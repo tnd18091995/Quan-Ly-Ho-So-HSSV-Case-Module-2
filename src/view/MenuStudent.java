@@ -33,7 +33,7 @@ public class MenuStudent {
                 case 4:
                     System.out.println("Enter ID Student");
                     int idEdit = scanner.nextInt();
-                    StudentManager.editStudent(idEdit,scanner);
+                    StudentManager.editStudent(idEdit, scanner);
                     break;
                 case 5:
                     System.out.println("Enter ID Student");
@@ -41,7 +41,7 @@ public class MenuStudent {
                     StudentManager.removeStudent(idRemove);
                     break;
                 case 6:
-                    StudentManager.sortScore();
+                    MenuSortStudent.sortStudent();
                 case 0:
                     System.out.println("Exit Program");
                     break;
